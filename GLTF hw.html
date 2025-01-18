@@ -1,0 +1,37 @@
+<!-- olympic race scene using race track plane and a gltf of a man(usain bolt) running across it -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+    <script src="clock.js"></script>
+    <title>running man</title>
+</head>
+<body>
+    <a-scene background="color: grey;">
+        <a-assets>
+            <a-asset-item id="man" src="male_run/scene.gltf"></a-asset-item>
+        </a-assets>
+        <a-entity id="camera"camera>
+            <a-entity position="-5 -10 -12">
+                <a-entity position="-1.9 13 0" text="font: aileronsemibold; width: 20; color: white; value:"></a-entity>
+                <a-entity id="timer" position="-1.9 13 0" text="font: aileronsemibold; width: 20; color: white; value:0" clock></a-entity>
+
+            </a-entity>
+        <!-- <a-plane position="0 -10 -50" height="25" width="70" color="#336600" rotation="-90 0 0"></a-plane>
+        <a-plane position="0 -9.8 -50" height="20" width="65" color="red" rotation="-90 0 0"></a-plane>
+        <a-plane position="-30 -9.6 -50" height="3" width="5" color="white" rotation="-90 0 0"></a-plane>
+        <a-plane position="-20 -9.6 -50" height="3" width="5" color="white" rotation="-90 0 0"></a-plane>
+        <a-plane position="-10 -9.6 -50" height="3" width="5" color="white" rotation="-90 0 0"></a-plane>
+        <a-plane position="0 -9.6 -50" height="3" width="5" color="white" rotation="-90 0 0"></a-plane>
+        <a-plane position="10 -9.6 -50" height="3" width="5" color="white" rotation="-90 0 0"></a-plane>
+        <a-plane position="20 -9.6 -50" height="3" width="5" color="white" rotation="-90 0 0"></a-plane>
+        <a-plane position="30 -9.6 -50" height="3" width="5" color="white" rotation="-90 0 0"></a-plane> -->
+        <a-entity gltf-model="#man" id="man_model" counter animation-mixer position="-30 -9.6 -50" scale="3 3 3" rotation="0 90 0" 
+        animation="property: object3D.position.x; from: -30; to: 30; dur: 2500;" event__animationcomplete="clock__stopTimer"  ></a-entity>
+
+    </a-scene>
+</body>
+</html>
