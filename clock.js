@@ -32,6 +32,7 @@ AFRAME.registerComponent("counter", {
     clock__stopTimer: function(){  
         var scene=document.querySelector("a-scene");
         var gltf=document.getElementById("man_model");
+        
         //gltf.setAttribute("position", "-30 -9.6 -50");
         // var x=document.getElementById("timer")
         // x.setAttribute("text", {value: String(this.increment)});
@@ -51,5 +52,11 @@ AFRAME.registerComponent("counter", {
         var scene=document.querySelector("a-scene");
         var gltf=document.getElementById("man_model");
         gltf.setAttribute("position", "-30 -9.6 -50");
+        var last_msg=document.getElementById("end")
+        last_msg.setAttribute("text", {value: ("You have completed the race")})
+        var timer_ID=document.getElementById("timer")
+        timer_ID.setAttribute("text",{value:(" ")})
+        
+
     }
 });
